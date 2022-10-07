@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Фитнес-клуб "Армия"</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+  <body>
+    <div class="container">
+      <h1>Фитнес-клуб "Армия"</h1>
+      <div class="text">
+        <p>С 1 ноября открытие нового БЕСПЛАТНОГО фитнес-клуба!</p>
+        <ul>
+          <li>Регулярные тренировки</li>
+          <li>Правильное питание</li>
+          <li>Продуманный режим дня</li>
+          <li>Вы увидите результат посещения клуба уже через неделю!</li>
+        </ul>
+        <b>Успейте заполучить годовой абонемент совершенно бесплатно!</b>
+      </div>
+
+      <div class="forms">
+        <div style="margin-right: 100px;">
+          <h2>Для этого всего лишь необходимо зарегистрироваться:</h2><br>
+          <form action="#" method="post" id="form-1">
+            <input type="text" placeholder="ФИО" name="soldier_name" class="input"><br>
+
+            <label>Пол:</label>
+            <input type="radio" id="gender_m" name="gender" class="input"><label for="gender_m">М</label>
+            <input type="radio" id="gender_g" disabled name="gender" class="input"><label for="gender_g">Ж</label><br>
+
+            <label>Образование</label><br>
+            <select class="input" name="education">
+              <option value="" disabled selected>Выберите ваш уровень:</option>
+              <optgroup label="Среднее">
+                <option value="1">основное общее (5—9 класс)</option>
+                <option value="2">среднее общее (10 и 11 классы)</option>
+                <option value="3">среднее профессиональное</option>
+              </optgroup>
+              <optgroup label="Высшее">
+                <option value="4">высшее I степени – бакалавриат</option>
+                <option value="5">высшее II степени – специалитет, магистратура</option>
+                <option value="6">высшее III степени – подготовка кадров высшей квалификации</option>
+              </optgroup>
+            </select><br>
+
+            <label for="answer">В какие игры любите играть?</label><br>
+            <textarea form="form-1" class="input" name="answer" maxlength="200" wrap="soft" cols="30" rows="5"></textarea><br>
+
+            <input type="password" placeholder="Придумайте пароль" name="soldier_password" class="input"><br>
+
+            <input type="reset" class="input"><br>
+            <input type="checkbox" class="input" name="agree"><label for="agree">Согласен на обработку персональных данных</label><br>
+            <input type="submit" class="input" form="form-1">
+          </form>
+        </div>
+
+        <div>
+          <h2>Создать запрос на получение повистки:</h2><br>
+          <form action="#" method="post" id="form-2">
+            <label>Ваш возраст:</label><br>
+            <div style="display: flex;">
+              <input type="number" name="years" class="input" min="16" max="99" required value="16">
+              <p style="padding-top: 10px;">лет</p><br>
+            </div>
+
+            <label>Выберите количество лет службы:</label><br>
+            <input type="range" name="soldier_years" class="input" min="1" max="5" oninput="result.value=soldier_years.value">
+            <output name="result">1</output><br>
+
+            <label>Введите ваш телефон:</label><br>
+            <input type="tel" name="tel" class="input" placeholder="+7(___)___-__-__" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"><br>
+
+            <label>Введите вашу почту:</label><br>
+            <input type="tel" name="tel" class="input" placeholder="test@test.ru" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"><br>
+
+            <label>Введите вашу ссылку на соц сеть:</label><br>
+            <input type="tel" name="tel" class="input"><br>
+
+            <label>В какую горячую точку мира хотели бы попасть без подготовки?</label><br>
+            <input type="search" name="search" class="input" list="points" pattern="^[Уукраина\s]+$"><br>
+            <datalist id="points">
+              <option value="Украина"></option>
+              <option value="Украина другой фронт"></option>
+              <option value="Украина последний фронт"></option>
+            </datalist>
+
+            <label>Выберите желаемую дату начала службы:</label><br>
+            <input type="date" name="date" class="input"><br>
+
+            <label>Выберите желаемую цветовую гамму войск:</label><br>
+            <input type="color" name="color" class="input" style="min-height: 50px;"><br>
+
+            <input type="submit" class="input" form="form-2">
+          </form>
+        </div>
+      </div>
+      <img src="/img/main.jpg" alt="Красивая девочка со стойки регистрации" class="img">
+    </div>
+  </body>
+</html>
